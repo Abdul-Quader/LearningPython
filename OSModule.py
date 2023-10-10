@@ -1,4 +1,10 @@
+# <<<<<<< HEAD
 #Program to show various Python OS Module 
+# =======
+#Program to show various Python OS Module for accessing OS commands
+#import os package 
+
+# >>>>>>> 1ef2ab2 (OSModule.py modified comments)
 import os
 
 #Print Current Working Directory
@@ -25,9 +31,13 @@ try:
     file.close()
 
     #Renaming a file
-    path = os.path.join(cwd, "Pyton Handbook.pdf")
-    file1 = "Python Handbook.pdf"
-    os.rename(file1, "Python_Handbook.pdf")
+    path = os.path.join(cwd, "Pyton_Handbook.pdf")
+    # file1 = "Python Handbook.pdf"
+    # os.rename(file1, "Python_Handbook.pdf")
+
+    #Printing file size
+    size = os.path.getsize("Python_Handbook.pdf")
+    print(size)
 
 except IOError:
     print("File % s not found"% "README.md")
