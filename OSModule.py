@@ -1,4 +1,4 @@
-#Program to show various Python OS Module 
+#Program to show various Python OS Module for accessing OS commands
 import os
 
 #Print Current Working Directory
@@ -20,9 +20,14 @@ try:
     path = os.path.join(cwd,"README.md")
     file = open(path, 'r')
     print(file.read())
-    file.write("Learning Python")
+    # file.write("Learning Python")
     # print(file.read())
     file.close()
+
+    #Renaming a file
+    path = os.path.join(cwd, "Pyton Handbook.pdf")
+    file1 = "Python Handbook.pdf"
+    os.rename(file1, "Python_Handbook.pdf")
 
 except IOError:
     print("File % s not found"% "README.md")
